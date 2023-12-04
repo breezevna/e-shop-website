@@ -449,7 +449,8 @@ footer {
     background-color: #4a90e2;
     color: #fff;
     border: none;
-    padding: 8px 12px;
+    padding: 8px 12px !important;
+    margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
     max-width: 150px;
