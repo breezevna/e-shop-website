@@ -57,16 +57,11 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-button[type="submit"]:hover {
-    background-color: #3667b5;
-    transition: background-color 0.3s ease;
-}
-
 .navbar-menu ul {
     list-style: none;
     padding: 0;
     display: flex;
-    border-bottom: 1px solid #dbdbdb;
+    border-bottom: 2px solid #4a90e2;
 }
 
 .navbar-menu li {
@@ -75,8 +70,33 @@ button[type="submit"]:hover {
 
 .navbar-menu a {
     text-decoration: none;
-    color: #4a4a4a;;
+    color: #333;
+    font-weight: bold;
     font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.logo-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #878787;
 }
 
 /* Main content styles */
@@ -94,6 +114,7 @@ main {
     overflow: hidden;
     width: 100%;
     max-width: 100%;
+    height: 50%;
 }
 
 .slides {
@@ -213,10 +234,7 @@ additional-info-container {
 .info-section p {
     color: #666;
 }
-.info-section:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s ease-in-out;
-}
+
 /*Featured Products */
 .featured-products {
     background-color: #1d242f;
@@ -390,16 +408,18 @@ additional-info-container {
     cursor: pointer;
     transition: transform 0.5s;
 }
-.review .col-3:hover{
 
-    transform: translateY(-10px);
-}
 /* Footer styles */
+
 footer {
-    background: #1d242f;
+    background-color: #1d242f;
     color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 10px;
+}
+
+footer a {
+    color: #fff;
 }
 
 .cart-container {
@@ -447,7 +467,6 @@ footer {
 
 .cart-add-button {
     background-color: #4a90e2;
-    color: #fff;
     border: none;
     padding: 8px 12px !important;
     margin-top: 10px;
@@ -456,21 +475,14 @@ footer {
     max-width: 150px;
 }
 
-.cart-add-button:hover {
-    background-color: #3667b5;
-    transition: background-color 0.3s ease;
+.button-check-out{
+    color: #fff;
 }
-
 .checkout-container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #f5f5f5;
-}
-
-h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
 }
 
 .checkout-form {
@@ -518,19 +530,13 @@ input, textarea, select {
     background-color: #4a90e2;
     color: #fff;
     border: none;
-    padding: 16px 24px; /* Adjust padding to make the button smaller */
+    padding: 16px 24px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Optional: Adjust font size */
-}
-
-.cart-add-button:hover {
-    background-color: #3667b5;
-    transition: background-color 0.3s ease;
+    font-size: 14px;
 }
 
 /* About Us */
-
 
 .about-us-container {
     max-width: 800px;
@@ -565,11 +571,126 @@ input, textarea, select {
     font-size: 18px;
 }
 
-.about-us-container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+
+
+.categories-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+.category {
+    display: flex;
+    align-items: center;
+    background-color: #1d242f;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+}
+.category-text {
+    flex: 1;
+}
+
+.category h3 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.category p {
+    color: #ddd;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.prod-category {
+    font-size: 36px;
+    color: #1d242f;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-top: -1.25rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+.news-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.span-two {
+    grid-column: span 1;
+}
+
+.complex-item {
+    grid-column: span 1;
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.review {
+    width: 45%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-content h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #1d242f;
+}
+
+.rating {
+    font-size: 24px;
+    margin: 5px 0;
+    color: #f39c12;
+}
+
+.comment {
+    font-size: 14px;
+    color: #666;
+}
 
 /* For big screens */
 @media screen and (min-width: 768px) {
@@ -635,8 +756,64 @@ main {
 }
 
 .comment-box {
-    width: 48%; /* Adjust as needed */
+    width: 48%;
 }
+.cart-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.news-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.complex-item {
+    grid-column: span 4;
+}
+.review:hover {
+    transform: scale(1.05);
+}
+
+.review img:hover {
+    transform: scale(1.2);
+}
+button[type="submit"]:hover {
+    background-color: #3667b5;
+    transition: background-color 0.3s ease;
+}
+.navbar-menu a:hover {
+    color: #fff;
+    background-color: #4a90e2;
+}
+.info-section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+.review .col-3:hover{
+
+    transform: translateY(-10px);
+}
+.cart-add-button:hover {
+    background-color: #3667b5;
+    transition: background-color 0.3s ease;
+}
+.about-us-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+.category:hover {
+    background-color: #4a699c;
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+.news-item:hover {
+    transform: scale(1.05);
+}
+
 .cart-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
