@@ -666,7 +666,22 @@ input, textarea, select {
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
-
+.review-prod-detail {
+    background-color: #1d242f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.review-prod-detail .col-3 {
+    background-color: #f9f9f9;
+    margin: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
 .review img {
     width: 80px;
     height: 80px;
@@ -794,6 +809,10 @@ button[type="submit"]:hover {
     transition: transform 0.3s ease-in-out;
 }
 .review .col-3:hover{
+
+    transform: translateY(-10px);
+}
+.review-prod-detail .col-3:hover{
 
     transform: translateY(-10px);
 }
